@@ -1,0 +1,29 @@
+# Tibia - Graphical Multi-User-Dungeon
+# .tibia: Konfigurationsdatei (Game-Server)
+
+# Verzeichnisse
+BINPATH     = "/opt/game/bin"
+MAPPATH     = "/opt/game/map"
+ORIGMAPPATH = "/opt/game/origmap"
+DATAPATH    = "/opt/game/dat"
+USERPATH    = "/opt/game/usr"
+LOGPATH     = "/opt/game/log"
+SAVEPATH    = "/opt/game/save"
+MONSTERPATH = "/opt/game/mon"
+NPCPATH     = "/opt/game/npc"
+
+# SharedMemories
+SHM = 10011
+
+# DebugLevel
+DebugLevel = 2
+
+# Server-Takt
+Beat = 50
+
+# QueryManager
+QueryManager = {("127.0.0.1",17778,"nXE?/>j`"),("127.0.0.1",17778,"nXE?/>j`"),("127.0.0.1",17778,"nXE?/>j`"),("127.0.0.1",17778,"nXE?/>j`")}
+
+# Weltstatus
+World = "Zanera"
+State = public
