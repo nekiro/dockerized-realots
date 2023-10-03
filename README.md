@@ -5,6 +5,7 @@
 1. Download realots files from otland (tibia-game.tarball.tar.gz). I will not provide these files here for obvious reasons.
 2. Unpack it to tibia-game.tarball
 3. Copy .tibia to tibia-game.tarball
+4. Copy game to tibia-game.tarball/bin
 
 ## Run
 
