@@ -8,9 +8,10 @@ RUN chmod 777 -R /lib
 WORKDIR /opt/game
 
 COPY ./tibia-game.tarball/ .
-RUN chmod 777 ./bin/game
 RUN cp .tibia ~
 RUN rm -f /opt/game/save/game.pid
-COPY ./game /bin
+
+COPY /game /bin
+RUN chmod 777 /bin/game
 
 CMD /bin/game
