@@ -1,5 +1,9 @@
 # dockerized-realots
 
+NOTE: This will not work on windows or mac :(
+
+read more: https://stackoverflow.com/questions/48915458/windows-run-docker-with-network-host-and-access-with-127-0-0-1
+
 ## Setup
 
 1. Download realots files from otland (tibia-game.tarball.tar.gz). I will not provide these files here for obvious reasons.

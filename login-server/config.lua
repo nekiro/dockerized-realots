@@ -42,7 +42,7 @@ rateMagic = 3
 rateSpawn = 1
 
 -- MySQL
-mysqlHost = "mysql"
+mysqlHost = "127.0.0.1"
 mysqlUser = "root"
 mysqlPass = ""
 mysqlDatabase = "realots"

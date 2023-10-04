@@ -3,13 +3,31 @@ services:
   game:
     build:
       context: .
-      dockerfile: ./docker/Game.Dockerfile
+      dockerfile: ./docker/game.Dockerfile
     container_name: game
-    ports:
-      - 7171:7171
-      - 7172:7172
+    depends_on:
+      - querymanager
+    network_mode: host
+    restart: unless-stopped
+
+  loginserver:
+    build:
+      context: .
+      dockerfile: ./docker/loginserver.Dockerfile
+    container_name: loginserver
     depends_on:
       - mysql
+    network_mode: host
+    restart: unless-stopped
+
+  querymanager:
+    build:
+      context: .
+      dockerfile: ./docker/querymanager.Dockerfile
+    container_name: querymanager
+    depends_on:
+      - mysql
+    network_mode: host
     restart: unless-stopped
 
   mysql:
@@ -19,8 +37,7 @@ services:
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: true
       MYSQL_DATABASE: realots
-    ports:
-      - 3306:3306
+    network_mode: host
     volumes:
       - mysql-data:/var/lib/mysql
       - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
