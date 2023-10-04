@@ -35,7 +35,7 @@ services:
     platform: linux/amd64
     container_name: mysql
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: true
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
       MYSQL_DATABASE: realots
     network_mode: host
     volumes:

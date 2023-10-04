@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 
-RUN apt update -y && apt install -y lib32z1
+RUN apt update -y
 
 COPY ./dennis-libraries/ /lib/
 RUN chmod 777 -R /lib
